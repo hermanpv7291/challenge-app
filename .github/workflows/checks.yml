@@ -1,7 +1,5 @@
 name: GitHub Actions
-  push:
-    branches:
-      - main
+on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -16,5 +14,4 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: 
       - run: echo "🍏 This job's status is ${{ job.status }}."
