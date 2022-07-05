@@ -1,0 +1,19 @@
+name: GitHub Actions
+  on:
+    pull_request:
+      branches:
+        - develop
+        - main
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    name: Continuous Integration
+    steps:
+      - name: Install dependencies
+        run: npm install
+      - name: Run linter
+        run: npm run lint
+      - name: Build the App
+        run: npm run build
+      - name: Run unit tests
+        run: npm run test
